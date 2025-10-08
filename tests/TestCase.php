@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Fkrzski\TestPacakge\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
 use Fkrzski\TestPacakge\TestPacakgeServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 final class TestCase extends Orchestra
 {
