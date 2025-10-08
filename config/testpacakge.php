@@ -14,7 +14,7 @@ return [
     | Package Configuration
     |--------------------------------------------------------------------------
     |
-    | Here you can configure your package settings.
+    | Here you can configure your package settings. Test
     |
     */
 ];
