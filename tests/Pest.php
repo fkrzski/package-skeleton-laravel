@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-use VendorName\Skeleton\Tests\TestCase;
+use Fkrzski\TestPacakge\Tests\TestCase;
 
 uses(TestCase::class);

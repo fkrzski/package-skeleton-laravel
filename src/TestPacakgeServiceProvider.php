@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace VendorName\Skeleton;
+namespace Fkrzski\TestPacakge;
 
 use Illuminate\Support\ServiceProvider;
 
-final class SkeletonServiceProvider extends ServiceProvider
+final class TestPacakgeServiceProvider extends ServiceProvider
 {
     public function register(): void
     {

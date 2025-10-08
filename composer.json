@@ -1,16 +1,16 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "fkrzski/testpacakge",
+    "description": "This is my package testpacakge",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "fkrzski",
+        "testpacakge"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/fkrzski/testpacakge",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "fkrzski",
+            "email": "filip.krzyzanowski@protonmail.com",
             "role": "Developer"
         }
     ],
@@ -32,12 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Fkrzski\\TestPacakge\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Fkrzski\\TestPacakge\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -68,10 +68,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Fkrzski\\TestPacakge\\TestPacakgeServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "TestPacakge": "Fkrzski\\TestPacakge\\Facades\\TestPacakge"
             }
         }
     },

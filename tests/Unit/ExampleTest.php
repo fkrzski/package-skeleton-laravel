@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-use VendorName\Skeleton\SkeletonClass;
+use Fkrzski\TestPacakge\TestPacakgeClass;
 
-mutates(SkeletonClass::class);
+mutates(TestPacakgeClass::class);
 
 it('foo', function (): void {
-    $example = new SkeletonClass;
+    $example = new TestPacakgeClass;
 
     expect($example)->toBeObject();
 });
