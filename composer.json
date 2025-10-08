@@ -19,7 +19,8 @@
         "illuminate/support": "^11.0|^12.0"
     },
     "require-dev": {
-        "driftingly/rector-laravel": "^2.0",
+        "driftingly/rector-laravel": "^2.0.7",
+        "rector/rector": "^2.1.2",
         "larastan/larastan": "^3.0",
         "laravel/pint": "^1.17",
         "mockery/mockery": "^1.6",
