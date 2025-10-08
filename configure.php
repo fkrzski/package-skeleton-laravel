@@ -81,7 +81,7 @@ function replaceForWindows(): array
 
 function replaceForAllOtherOSes(): array
 {
-    return explode(PHP_EOL, run('grep -E -r -l -i ":author|:vendor|:package|VendorName|skeleton|vendor_name|vendor_slug|author@domain.com" --exclude-dir=vendor ./* .github/ | grep -v '.basename(__FILE__)));
+    return explode(PHP_EOL, run('grep -E -r -l -i ":author|:vendor|:package|VendorName|skeleton|vendor_name|vendor_slug|author@domain.com" --exclude-dir=vendor ./* .github/ config/ | grep -v '.basename(__FILE__)));
 }
 
 $gitName = run('git config user.name');
@@ -145,11 +145,15 @@ foreach ($files as $file) {
     ]);
 
     match (true) {
-        str_contains($file, determineSeparator('src/SkeletonClass.php')) => rename($file, determineSeparator('./src/'.$className.'Class.php')),
         str_contains($file, 'README.md') => removeReadmeParagraphs($file),
         default => [],
     };
 }
+
+rename(determineSeparator('./src/SkeletonClass.php'), determineSeparator('./src/'.$className.'Class.php'));
+rename(determineSeparator('./src/SkeletonServiceProvider.php'), determineSeparator('./src/'.$className.'ServiceProvider.php'));
+rename(determineSeparator('./src/Facades/Skeleton.php'), determineSeparator('./src/Facades/'.$className.'.php'));
+rename(determineSeparator('./config/skeleton.php'), determineSeparator('./config/'.strtolower($packageSlug).'.php'));
 
 confirm('Execute `composer install` and run tests?') && run('composer install && composer test');
 

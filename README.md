@@ -5,12 +5,16 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=for-the-badge)](https://packagist.org/packages/:vendor_slug/:package_slug)
 <!--delete-->
 ---
-This package can be used as to scaffold a framework agnostic package. Follow these steps to get started:
+This package can be used as to scaffold a Laravel package. Follow these steps to get started:
 
 1. Press the "Use template" button at the top of this repo to create a new repo with the contents of this skeleton
 2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files
 3. Have fun creating your package.
-4. If you need help creating a package, consider picking up our <a href="https://laravelpackage.training">Laravel Package Training</a> video course.
+4. Your package includes:
+   - ServiceProvider with config publishing
+   - Config file in `config/` folder
+   - Commented examples for migrations, views, translations, routes, and commands
+
 ---
 <!--/delete-->
 This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
@@ -23,10 +27,18 @@ You can install the package via composer:
 composer require :vendor_slug/:package_slug
 ```
 
+## Publishing Config
+
+You can publish the config file with:
+
+```bash
+php artisan vendor:publish --tag="skeleton-config"
+```
+
 ## Usage
 
 ```php
-$skeleton = new VendorName\Skeleton();
+$skeleton = new VendorName\Skeleton\SkeletonClass();
 echo $skeleton->echoPhrase('Hello, VendorName!');
 ```
 
