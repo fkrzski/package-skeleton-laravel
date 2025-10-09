@@ -32,14 +32,14 @@ composer require :vendor_slug/:package_slug
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="skeleton-config"
+php artisan vendor:publish --tag=":package_slug-config"
 ```
 
 ## Usage
 
 ```php
-$skeleton = new VendorName\Skeleton\SkeletonClass();
-echo $skeleton->echoPhrase('Hello, VendorName!');
+$class = new VendorName\Skeleton\SkeletonClass();
+echo $class->foo();
 ```
 
 ## Testing

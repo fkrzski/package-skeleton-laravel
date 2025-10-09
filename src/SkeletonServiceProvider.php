@@ -11,8 +11,8 @@ final class SkeletonServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/skeleton.php',
-            'skeleton'
+            __DIR__.'/../config/:package_slug.php',
+            ':package_slug'
         );
     }
 
@@ -20,29 +20,29 @@ final class SkeletonServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/skeleton.php' => config_path('skeleton.php'),
-            ], 'skeleton-config');
+                __DIR__.'/../config/:package_slug.php' => config_path(':package_slug.php'),
+            ], ':package_slug-config');
 
             // $this->publishes([
             //     __DIR__.'/../database/migrations' => database_path('migrations'),
-            // ], 'skeleton-migrations');
+            // ], ':package_slug-migrations');
 
             // $this->publishes([
-            //     __DIR__.'/../resources/views' => resource_path('views/vendor/skeleton'),
-            // ], 'skeleton-views');
+            //     __DIR__.'/../resources/views' => resource_path('views/vendor/:package_slug'),
+            // ], ':package_slug-views');
 
             // $this->publishes([
-            //     __DIR__.'/../resources/lang' => $this->app->langPath('vendor/skeleton'),
-            // ], 'skeleton-lang');
+            //     __DIR__.'/../resources/lang' => $this->app->langPath('vendor/:package_slug'),
+            // ], ':package_slug-lang');
 
             // $this->commands([
             //     // YourCommand::class,
             // ]);
         }
 
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'skeleton');
+        // $this->loadViewsFrom(__DIR__.'/../resources/views', ':package_slug');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'skeleton');
+        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', ':package_slug');
         // $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
     }
 }
