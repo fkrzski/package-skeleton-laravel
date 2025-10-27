@@ -1,7 +1,7 @@
 # :package_description
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=for-the-badge)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![Tests](https://img.shields.io/github/actions/workflow/status/:vendor_slug/:package_slug/run-tests.yml?branch=main&label=tests&style=for-the-badge)](https://github.com/:vendor_slug/:package_slug/actions/workflows/run-tests.yml)
+[![Tests](https://img.shields.io/github/actions/workflow/status/:vendor_slug/:package_slug/tests.yml?branch=master&label=tests&style=for-the-badge)](https://github.com/:vendor_slug/:package_slug/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=for-the-badge)](https://packagist.org/packages/:vendor_slug/:package_slug)
 <!--delete-->
 ---
